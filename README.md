@@ -1,11 +1,11 @@
-# ONGR Elasticsearch Bundle
+# GWSN Elasticsearch Bundle
 
 Elasticsearch Bundle was created in order to serve the need for
 professional [Elasticsearch][1] integration with enterprise level Symfony
 applications. This bundle is:
 
-* Supported by [ONGR.io][2] development team.
-* Uses the official [elasticsearch-php][3] client.
+* Supported by [Global Web Systems][2] development team, forked from the original [ongr.io/ElasticsearchBundle][3]
+* Uses the official [elasticsearch-php][4] client.
 * Ensures full integration with Symfony framework.
 
 Technical goodies:
@@ -18,7 +18,7 @@ Technical goodies:
 * Profiler that integrates in the Symfony debug bar and shows all executed queries.
 * Designed in an extensible way for all your custom needs.
 
-If you need any help, [stack overflow][4]
+If you need any help, [stack overflow][5]
 is the preferred and recommended way to ask questions about ONGR bundles and libraries.
 
 
@@ -40,27 +40,27 @@ is the preferred and recommended way to ask questions about ONGR bundles and lib
 
 ## Documentation
 
-The online documentation of the bundle can be found in [http://docs.ongr.io][5].
+The online documentation of the bundle can be found in [http://docs.ongr.io][6].
 Docs source is stored within the repo under `Resources/doc/`, so if you see a typo or problem, please submit a PR to fix it!
 
-For contribution to the documentation you can find it in the [contribute][6] topic.
+For contribution to the documentation you can find it in the [contribute][7] topic.
 
 ## FAQ
-* [Mapping explained][7]
-* [Using Meta-Fields][8]
-* [Configuration][9]
-* [Console commands][10]
-* [How to do a simple CRUD actions][11]
-* [Quick find functions][12]
-* [How to search the index][13]
-* [Scan through the index][14]
-* [Parsing the results][15]
+* [Mapping explained][8]
+* [Using Meta-Fields][9]
+* [Configuration][10]
+* [Console commands][11]
+* [How to do a simple CRUD actions][12]
+* [Quick find functions][13]
+* [How to search the index][14]
+* [Scan through the index][15]
+* [Parsing the results][16]
 
 ## Setup the bundle
 
 #### Step 1: Install Elasticsearch bundle
 
-Elasticsearch bundle is installed using [Composer][16].
+Elasticsearch bundle is installed using [Composer][17].
 
 ```bash
 php composer.phar require ongr/elasticsearch-bundle "~5.0"
@@ -68,7 +68,7 @@ php composer.phar require ongr/elasticsearch-bundle "~5.0"
 ```
 
 > Instructions for installing and deploying Elasticsearch can be found in
- [Elasticsearch installation page][17].
+ [Elasticsearch installation page][18].
 
 Enable Elasticsearch bundle in your AppKernel:
 
@@ -105,10 +105,10 @@ ongr_elasticsearch:
 
 ```
 
-> This is the very basic example only, for more information, please take a look at the [configuration][9] chapter.
+> This is the very basic example only, for more information, please take a look at the [configuration][10] chapter.
 
 In this particular example there are 2 things you should know. The index name in the index node and the mappings.
- Mappings is the place where your documents are stored (more info at [the mapping chapter][7]).
+ Mappings is the place where your documents are stored (more info at [the mapping chapter][8]).
 
 
 #### Step 3: Define your Elasticsearch types as `Document` objects
@@ -145,7 +145,7 @@ class Customer
 ```
 
 > This is the basic example only, for more information about mapping, please take a look
- at the [the mapping chapter][7].
+ at the [the mapping chapter][8].
 
 
 #### Step 4: Create index and mappings
@@ -158,18 +158,18 @@ bin/console ongr:es:index:create
 
 ```
 
-> More info about the rest of the commands can be found in the [commands chapter][10].
+> More info about the rest of the commands can be found in the [commands chapter][11].
 
 
 #### Step 5: Enjoy with the Elasticsearch
 
-We advise to take a look at the [mapping chapter][7] to configure the index.
-Search documentation for the Elasticsearch bundle is [available here][13].
+We advise to take a look at the [mapping chapter][8] to configure the index.
+Search documentation for the Elasticsearch bundle is [available here][14].
 And finally it's up to you what amazing things you are going to create :sunglasses: .
 
 ## Troubleshooting
-* [How to upgrade from the older versions?][18]
-* [How to overwrite some parts of the bundle?][19]
+* [How to upgrade from the older versions?][19]
+* [How to overwrite some parts of the bundle?][20]
 
 ## License
 
@@ -179,21 +179,22 @@ in the bundle `LICENSE` file.
 
 
 [1]: https://www.elastic.co/products/elasticsearch
-[2]: http://ongr.io
-[3]: https://github.com/elastic/elasticsearch-php
-[4]: http://stackoverflow.com/questions/tagged/ongr
-[5]: http://docs.ongr.io/ElasticsearchBundle
-[6]: http://docs.ongr.io/common/Contributing
-[7]: http://docs.ongr.io/ElasticsearchBundle/mapping
-[8]: http://docs.ongr.io/ElasticsearchBundle/meta_fields
-[9]: http://docs.ongr.io/ElasticsearchBundle/configuration
-[10]: http://docs.ongr.io/ElasticsearchBundle/commands
-[11]: http://docs.ongr.io/ElasticsearchBundle/crud
-[12]: http://docs.ongr.io/ElasticsearchBundle/find_functions
-[13]: http://docs.ongr.io/ElasticsearchBundle/search
-[14]: http://docs.ongr.io/ElasticsearchBundle/scan
-[15]: http://docs.ongr.io/ElasticsearchBundle/results_parsing
-[16]: https://getcomposer.org
-[17]: https://www.elastic.co/downloads/elasticsearch
-[18]: http://docs.ongr.io/ElasticsearchBundle/upgrade
-[19]: http://docs.ongr.io/ElasticsearchBundle/overwriting_bundle
+[2]: https://www.globalwebsystems.nl
+[3]: https://www.globalwebsystems.nl
+[4]: https://github.com/elastic/elasticsearch-php
+[5]: http://stackoverflow.com/questions/tagged/ongr
+[6]: http://docs.ongr.io/ElasticsearchBundle
+[7]: http://docs.ongr.io/common/Contributing
+[8]: http://docs.ongr.io/ElasticsearchBundle/mapping
+[9]: http://docs.ongr.io/ElasticsearchBundle/meta_fields
+[10]: http://docs.ongr.io/ElasticsearchBundle/configuration
+[11]: http://docs.ongr.io/ElasticsearchBundle/commands
+[12]: http://docs.ongr.io/ElasticsearchBundle/crud
+[13]: http://docs.ongr.io/ElasticsearchBundle/find_functions
+[14]: http://docs.ongr.io/ElasticsearchBundle/search
+[15]: http://docs.ongr.io/ElasticsearchBundle/scan
+[16]: http://docs.ongr.io/ElasticsearchBundle/results_parsing
+[17]: https://getcomposer.org
+[18]: https://www.elastic.co/downloads/elasticsearch
+[19]: http://docs.ongr.io/ElasticsearchBundle/upgrade
+[20]: http://docs.ongr.io/ElasticsearchBundle/overwriting_bundle
